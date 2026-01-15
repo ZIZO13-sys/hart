@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ست البنات ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Section --- */
+        :root {
+            --text-dark: #4a4e69;
+            --accent-pink: #ff8fab;
+            --deep-gold: #b5838d;
+            --glass: rgba(255, 255, 255, 0.75);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-dark);
+            /* خلفية Mesh Gradient راقية جداً */
+            background-color: #fefae0;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(339,49%,91%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,95%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,91%,1) 0, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(225,39%,95%,1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(339,49%,91%,1) 0, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* ستارة التحميل */
+        #loader {
+            position: fixed; top: 0; width: 100%; height: 100%;
+            background: #fff; z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+            transition: 1s ease;
+        }
+        .heart-loader { font-size: 3.5rem; animation: pulse 1.2s infinite; display: block; text-align: center; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+        /* الأقسام */
+        .screen {
+            height: 100dvh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* الكروت الزجاجية */
+        .glass-box {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 45px 30px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        }
+
+        .main-title { font-family: 'Amiri', serif; font-size: 2.5rem; color: var(--deep-gold); margin-bottom: 15px; }
+        .sub-title { font-size: 1.1rem; line-height: 1.6; font-weight: 300; }
+        .scroll-hint { margin-top: 30px; font-size: 0.8rem; opacity: 0.5; animation: bounce 2s infinite; }
+
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+
+        /* الفقاعات */
+        .bubble {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            margin: 10px;
+            display: inline-block;
+            border: 1px solid var(--accent-pink);
+            color: var(--deep-gold);
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255,143,171,0.1);
+        }
+
+        /* كارت الوعد */
+        .promise-card {
+            background: var(--accent-pink);
+            color: white;
+            border-radius: 40px;
+            padding: 50px 30px;
+            width: 100%;
+            max-width: 380px;
+            cursor: pointer;
+            transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hidden { display: none; }
+        .tap-instruction { font-size: 0.9rem; margin-top: 25px; display: block; opacity: 0.9; font-style: italic; }
+
+        /* أنيميشن الظهور */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1.5s all cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer { padding: 20px; text-align: center; font-size: 0.8rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <span class="heart-loader">❤️</span>
+            <p style="margin-top: 15px; font-weight: 300;">ثواني وبنفتح قلبي..</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="screen">
+            <div class="glass-box reveal">
+                <p style="letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 10px;">14 يناير 2026</p>
+                <h1 class="main-title">يا ست البنات..</h1>
+                <p class="sub-title">المكان ده معمول عشانك، وعشان أقولك .</p>
+                <div class="scroll-hint">إسحبي برفق للسماء.. ↓</div>
+            </div>
+        </section>
+
+        <section class="screen">
+            <div class="glass-box reveal">
+                <h2 style="color: var(--accent-pink); margin-bottom: 15px;">بصي يا ستي..</h2>
+                <p style="font-size: 1.25rem; line-height: 1.9; font-family: 'Amiri', serif;">
+                    وجودك في حياتي منور حياتي كلها . إنتي مش بس حبيبتي، إنتي الرزق اللي ربنا بعتهولي عشان يراضيني.
+                </p>
+            </div>
+        </section>
+
+        <section class="screen">
+            <div class="bubbles-container">
+                <div class="bubble reveal">انتي اجدع قلب </div>
+                <div class="bubble reveal">انتي احن وحده </div>
+                <div class="bubble reveal">انتي السند و الحب </div>
+                <div class="bubble reveal"> انتي اجمل صدفه في الدنيا</div>
+                <div class="bubble reveal"> انتي الروح ال انا عايش  علشنها   </div>
+            </div>
+        </section>
+
+        <section class="screen">
+            <div class="promise-card reveal" id="promise-trigger">
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">وعد ليكي.. 🤝</h3>
+                <div id="secret-message" class="hidden">
+                    <p style="font-size: 1.2rem; line-height: 1.7;">هفضل معاكي في المرة قبل الحلوة، هكون ليكي السند والضهر، والبيت اللي بترجعي له وانتي مطمنة دايماً.</p>
+                </div>
+                <span class="tap-instruction">إلمسي الكارت ده لو سمحتي</span>
+            </div>
+        </section>
+    </main>
+
+    <footer> ده ليكي إنتي وبس ❤️</footer>
+
+    <script>
+        /* --- JavaScript Section --- */
+
+        // 1. إخفاء اللوادر
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 1000);
+            }, 2000);
+        });
+
+        // 2. أنيميشن التمرير
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 3. كارت الوعد التفاعلي
+        const promiseCard = document.getElementById('promise-trigger');
+        const secretText = document.getElementById('secret-message');
+        const hint = document.querySelector('.tap-instruction');
+
+        promiseCard.addEventListener('click', () => {
+            secretText.classList.toggle('hidden');
+            
+            if (!secretText.classList.contains('hidden')) {
+                hint.innerText = "بحبك ❤️";
+                // اهتزاز الموبايل
+                if (window.navigator.vibrate) {
+                    window.navigator.vibrate([100, 50, 100]);
+                }
+            } else {
+                hint.innerText = "إلمسي الكارت ده لو سمحتي";
+            }
+        });
+    </script>
+</body>
+</html>
